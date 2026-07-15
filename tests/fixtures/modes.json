@@ -1,0 +1,962 @@
+[
+  {
+    "modeId": 186463,
+    "modeName": "Sunrise",
+    "accountId": 12345,
+    "deviceName": "TEST-DEVICE-001",
+    "presetType": "SUNRISE",
+    "presetName": "Sunrise",
+    "readOnly": true,
+    "modeIcon": null,
+    "modeImage": null,
+    "setting": {
+      "productCode": "OPTIBRIGHT",
+      "alarmCode": null,
+      "controlValues": [
+        {
+          "controlName": "Overall Power",
+          "controlType": "SWITCH",
+          "controlCode": "G",
+          "switchValue": true,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Blue Channel Power",
+          "controlType": "SWITCH",
+          "controlCode": "I",
+          "switchValue": true,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "White Channel Intensity",
+          "controlType": "PERCENTAGE",
+          "controlCode": "K",
+          "switchValue": null,
+          "numberValue": 15,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Blue Channel Intensity",
+          "controlType": "PERCENTAGE",
+          "controlCode": "L",
+          "switchValue": null,
+          "numberValue": 50,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "White Channel Power",
+          "controlType": "SWITCH",
+          "controlCode": "H",
+          "switchValue": true,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "RGB Channel Power",
+          "controlType": "SWITCH",
+          "controlCode": "J",
+          "switchValue": true,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "RGB Channel Intensity",
+          "controlType": "PERCENTAGE",
+          "controlCode": "M",
+          "switchValue": null,
+          "numberValue": 100,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "RGB Color Selection",
+          "controlType": "COLOR",
+          "controlCode": "N",
+          "switchValue": null,
+          "numberValue": null,
+          "redValue": 255,
+          "greenValue": 153,
+          "blueValue": 51
+        },
+        {
+          "controlName": "Cloud Mode",
+          "controlType": "SWITCH",
+          "controlCode": "O",
+          "switchValue": false,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Cloud Mode Intensity",
+          "controlType": "PERCENTAGE",
+          "controlCode": "P",
+          "switchValue": null,
+          "numberValue": 0,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Lightning Mode",
+          "controlType": "SWITCH",
+          "controlCode": "Q",
+          "switchValue": false,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Lightning Mode Intensity",
+          "controlType": "PERCENTAGE",
+          "controlCode": "R",
+          "switchValue": null,
+          "numberValue": 0,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "RGB Circulation Mode",
+          "controlType": "SWITCH",
+          "controlCode": "S",
+          "switchValue": false,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Top Accent Strip",
+          "controlType": "SWITCH",
+          "controlCode": "T",
+          "switchValue": true,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        }
+      ]
+    },
+    "fromPreset": true,
+    "fromPredefined": false,
+    "modeImagePath": null
+  },
+  {
+    "modeId": 186464,
+    "modeName": "Day",
+    "accountId": 12345,
+    "deviceName": "TEST-DEVICE-001",
+    "presetType": "DAY",
+    "presetName": "Day",
+    "readOnly": true,
+    "modeIcon": null,
+    "modeImage": null,
+    "setting": {
+      "productCode": "OPTIBRIGHT",
+      "alarmCode": null,
+      "controlValues": [
+        {
+          "controlName": "Overall Power",
+          "controlType": "SWITCH",
+          "controlCode": "G",
+          "switchValue": true,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Blue Channel Power",
+          "controlType": "SWITCH",
+          "controlCode": "I",
+          "switchValue": true,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "White Channel Intensity",
+          "controlType": "PERCENTAGE",
+          "controlCode": "K",
+          "switchValue": null,
+          "numberValue": 100,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Blue Channel Intensity",
+          "controlType": "PERCENTAGE",
+          "controlCode": "L",
+          "switchValue": null,
+          "numberValue": 100,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "White Channel Power",
+          "controlType": "SWITCH",
+          "controlCode": "H",
+          "switchValue": true,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "RGB Channel Power",
+          "controlType": "SWITCH",
+          "controlCode": "J",
+          "switchValue": true,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "RGB Channel Intensity",
+          "controlType": "PERCENTAGE",
+          "controlCode": "M",
+          "switchValue": null,
+          "numberValue": 100,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "RGB Color Selection",
+          "controlType": "COLOR",
+          "controlCode": "N",
+          "switchValue": null,
+          "numberValue": null,
+          "redValue": 255,
+          "greenValue": 255,
+          "blueValue": 153
+        },
+        {
+          "controlName": "Cloud Mode",
+          "controlType": "SWITCH",
+          "controlCode": "O",
+          "switchValue": false,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Cloud Mode Intensity",
+          "controlType": "PERCENTAGE",
+          "controlCode": "P",
+          "switchValue": null,
+          "numberValue": 0,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Lightning Mode",
+          "controlType": "SWITCH",
+          "controlCode": "Q",
+          "switchValue": false,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Lightning Mode Intensity",
+          "controlType": "PERCENTAGE",
+          "controlCode": "R",
+          "switchValue": null,
+          "numberValue": 0,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "RGB Circulation Mode",
+          "controlType": "SWITCH",
+          "controlCode": "S",
+          "switchValue": false,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Top Accent Strip",
+          "controlType": "SWITCH",
+          "controlCode": "T",
+          "switchValue": true,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        }
+      ]
+    },
+    "fromPreset": true,
+    "fromPredefined": false,
+    "modeImagePath": null
+  },
+  {
+    "modeId": 186465,
+    "modeName": "Sunset",
+    "accountId": 12345,
+    "deviceName": "TEST-DEVICE-001",
+    "presetType": "SUNSET",
+    "presetName": "Sunset",
+    "readOnly": true,
+    "modeIcon": null,
+    "modeImage": null,
+    "setting": {
+      "productCode": "OPTIBRIGHT",
+      "alarmCode": null,
+      "controlValues": [
+        {
+          "controlName": "Overall Power",
+          "controlType": "SWITCH",
+          "controlCode": "G",
+          "switchValue": true,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Blue Channel Power",
+          "controlType": "SWITCH",
+          "controlCode": "I",
+          "switchValue": true,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "White Channel Intensity",
+          "controlType": "PERCENTAGE",
+          "controlCode": "K",
+          "switchValue": null,
+          "numberValue": 20,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Blue Channel Intensity",
+          "controlType": "PERCENTAGE",
+          "controlCode": "L",
+          "switchValue": null,
+          "numberValue": 50,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "White Channel Power",
+          "controlType": "SWITCH",
+          "controlCode": "H",
+          "switchValue": true,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "RGB Channel Power",
+          "controlType": "SWITCH",
+          "controlCode": "J",
+          "switchValue": true,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "RGB Channel Intensity",
+          "controlType": "PERCENTAGE",
+          "controlCode": "M",
+          "switchValue": null,
+          "numberValue": 100,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "RGB Color Selection",
+          "controlType": "COLOR",
+          "controlCode": "N",
+          "switchValue": null,
+          "numberValue": null,
+          "redValue": 255,
+          "greenValue": 0,
+          "blueValue": 0
+        },
+        {
+          "controlName": "Cloud Mode",
+          "controlType": "SWITCH",
+          "controlCode": "O",
+          "switchValue": false,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Cloud Mode Intensity",
+          "controlType": "PERCENTAGE",
+          "controlCode": "P",
+          "switchValue": null,
+          "numberValue": 0,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Lightning Mode",
+          "controlType": "SWITCH",
+          "controlCode": "Q",
+          "switchValue": false,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Lightning Mode Intensity",
+          "controlType": "PERCENTAGE",
+          "controlCode": "R",
+          "switchValue": null,
+          "numberValue": 0,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "RGB Circulation Mode",
+          "controlType": "SWITCH",
+          "controlCode": "S",
+          "switchValue": false,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Top Accent Strip",
+          "controlType": "SWITCH",
+          "controlCode": "T",
+          "switchValue": true,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        }
+      ]
+    },
+    "fromPreset": true,
+    "fromPredefined": false,
+    "modeImagePath": null
+  },
+  {
+    "modeId": 186466,
+    "modeName": "Night",
+    "accountId": 12345,
+    "deviceName": "TEST-DEVICE-001",
+    "presetType": "NIGHT",
+    "presetName": "Night",
+    "readOnly": true,
+    "modeIcon": null,
+    "modeImage": null,
+    "setting": {
+      "productCode": "OPTIBRIGHT",
+      "alarmCode": null,
+      "controlValues": [
+        {
+          "controlName": "Overall Power",
+          "controlType": "SWITCH",
+          "controlCode": "G",
+          "switchValue": true,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Blue Channel Power",
+          "controlType": "SWITCH",
+          "controlCode": "I",
+          "switchValue": true,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "White Channel Intensity",
+          "controlType": "PERCENTAGE",
+          "controlCode": "K",
+          "switchValue": null,
+          "numberValue": 0,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Blue Channel Intensity",
+          "controlType": "PERCENTAGE",
+          "controlCode": "L",
+          "switchValue": null,
+          "numberValue": 100,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "White Channel Power",
+          "controlType": "SWITCH",
+          "controlCode": "H",
+          "switchValue": true,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "RGB Channel Power",
+          "controlType": "SWITCH",
+          "controlCode": "J",
+          "switchValue": true,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "RGB Channel Intensity",
+          "controlType": "PERCENTAGE",
+          "controlCode": "M",
+          "switchValue": null,
+          "numberValue": 100,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "RGB Color Selection",
+          "controlType": "COLOR",
+          "controlCode": "N",
+          "switchValue": null,
+          "numberValue": null,
+          "redValue": 153,
+          "greenValue": 51,
+          "blueValue": 255
+        },
+        {
+          "controlName": "Cloud Mode",
+          "controlType": "SWITCH",
+          "controlCode": "O",
+          "switchValue": false,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Cloud Mode Intensity",
+          "controlType": "PERCENTAGE",
+          "controlCode": "P",
+          "switchValue": null,
+          "numberValue": 0,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Lightning Mode",
+          "controlType": "SWITCH",
+          "controlCode": "Q",
+          "switchValue": false,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Lightning Mode Intensity",
+          "controlType": "PERCENTAGE",
+          "controlCode": "R",
+          "switchValue": null,
+          "numberValue": 0,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "RGB Circulation Mode",
+          "controlType": "SWITCH",
+          "controlCode": "S",
+          "switchValue": false,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Top Accent Strip",
+          "controlType": "SWITCH",
+          "controlCode": "T",
+          "switchValue": true,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        }
+      ]
+    },
+    "fromPreset": true,
+    "fromPredefined": false,
+    "modeImagePath": null
+  },
+  {
+    "modeId": 186467,
+    "modeName": "Overnight",
+    "accountId": 12345,
+    "deviceName": "TEST-DEVICE-001",
+    "presetType": "OVERNIGHT",
+    "presetName": "Overnight",
+    "readOnly": true,
+    "modeIcon": null,
+    "modeImage": null,
+    "setting": {
+      "productCode": "OPTIBRIGHT",
+      "alarmCode": null,
+      "controlValues": [
+        {
+          "controlName": "Overall Power",
+          "controlType": "SWITCH",
+          "controlCode": "G",
+          "switchValue": true,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Blue Channel Power",
+          "controlType": "SWITCH",
+          "controlCode": "I",
+          "switchValue": true,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "White Channel Intensity",
+          "controlType": "PERCENTAGE",
+          "controlCode": "K",
+          "switchValue": null,
+          "numberValue": 0,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Blue Channel Intensity",
+          "controlType": "PERCENTAGE",
+          "controlCode": "L",
+          "switchValue": null,
+          "numberValue": 0,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "White Channel Power",
+          "controlType": "SWITCH",
+          "controlCode": "H",
+          "switchValue": true,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "RGB Channel Power",
+          "controlType": "SWITCH",
+          "controlCode": "J",
+          "switchValue": true,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "RGB Channel Intensity",
+          "controlType": "PERCENTAGE",
+          "controlCode": "M",
+          "switchValue": null,
+          "numberValue": 0,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "RGB Color Selection",
+          "controlType": "COLOR",
+          "controlCode": "N",
+          "switchValue": null,
+          "numberValue": null,
+          "redValue": 255,
+          "greenValue": 180,
+          "blueValue": 180
+        },
+        {
+          "controlName": "Cloud Mode",
+          "controlType": "SWITCH",
+          "controlCode": "O",
+          "switchValue": false,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Cloud Mode Intensity",
+          "controlType": "PERCENTAGE",
+          "controlCode": "P",
+          "switchValue": null,
+          "numberValue": 0,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Lightning Mode",
+          "controlType": "SWITCH",
+          "controlCode": "Q",
+          "switchValue": false,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Lightning Mode Intensity",
+          "controlType": "PERCENTAGE",
+          "controlCode": "R",
+          "switchValue": null,
+          "numberValue": 0,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "RGB Circulation Mode",
+          "controlType": "SWITCH",
+          "controlCode": "S",
+          "switchValue": false,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Top Accent Strip",
+          "controlType": "SWITCH",
+          "controlCode": "T",
+          "switchValue": true,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        }
+      ]
+    },
+    "fromPreset": true,
+    "fromPredefined": false,
+    "modeImagePath": null
+  },
+  {
+    "modeId": 186468,
+    "modeName": "Predawn",
+    "accountId": 12345,
+    "deviceName": "TEST-DEVICE-001",
+    "presetType": "EARLY_MORNING",
+    "presetName": "Predawn",
+    "readOnly": true,
+    "modeIcon": null,
+    "modeImage": null,
+    "setting": {
+      "productCode": "OPTIBRIGHT",
+      "alarmCode": null,
+      "controlValues": [
+        {
+          "controlName": "Overall Power",
+          "controlType": "SWITCH",
+          "controlCode": "G",
+          "switchValue": true,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Blue Channel Power",
+          "controlType": "SWITCH",
+          "controlCode": "I",
+          "switchValue": true,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "White Channel Intensity",
+          "controlType": "PERCENTAGE",
+          "controlCode": "K",
+          "switchValue": null,
+          "numberValue": 0,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Blue Channel Intensity",
+          "controlType": "PERCENTAGE",
+          "controlCode": "L",
+          "switchValue": null,
+          "numberValue": 0,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "White Channel Power",
+          "controlType": "SWITCH",
+          "controlCode": "H",
+          "switchValue": true,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "RGB Channel Power",
+          "controlType": "SWITCH",
+          "controlCode": "J",
+          "switchValue": true,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "RGB Channel Intensity",
+          "controlType": "PERCENTAGE",
+          "controlCode": "M",
+          "switchValue": null,
+          "numberValue": 100,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "RGB Color Selection",
+          "controlType": "COLOR",
+          "controlCode": "N",
+          "switchValue": null,
+          "numberValue": null,
+          "redValue": 255,
+          "greenValue": 217,
+          "blueValue": 102
+        },
+        {
+          "controlName": "Cloud Mode",
+          "controlType": "SWITCH",
+          "controlCode": "O",
+          "switchValue": false,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Cloud Mode Intensity",
+          "controlType": "PERCENTAGE",
+          "controlCode": "P",
+          "switchValue": null,
+          "numberValue": 0,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Lightning Mode",
+          "controlType": "SWITCH",
+          "controlCode": "Q",
+          "switchValue": false,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Lightning Mode Intensity",
+          "controlType": "PERCENTAGE",
+          "controlCode": "R",
+          "switchValue": null,
+          "numberValue": 0,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "RGB Circulation Mode",
+          "controlType": "SWITCH",
+          "controlCode": "S",
+          "switchValue": false,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        },
+        {
+          "controlName": "Top Accent Strip",
+          "controlType": "SWITCH",
+          "controlCode": "T",
+          "switchValue": true,
+          "numberValue": null,
+          "redValue": null,
+          "greenValue": null,
+          "blueValue": null
+        }
+      ]
+    },
+    "fromPreset": true,
+    "fromPredefined": false,
+    "modeImagePath": null
+  }
+]

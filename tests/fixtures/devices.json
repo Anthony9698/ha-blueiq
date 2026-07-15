@@ -1,0 +1,29 @@
+[
+  {
+    "deviceName": "TEST-DEVICE-001",
+    "dateAdded": "2026-04-12T19:52:00.000+00:00",
+    "nickname": "Fish Light",
+    "aquariumId": null,
+    "lastSeen": "2026-07-14T23:08:42.000+00:00",
+    "status": "connected",
+    "disconnectReason": null,
+    "product": {
+      "productCode": "OPTIBRIGHT",
+      "productName": "Optibright Lighting",
+      "productType": "LIGHT",
+      "rampTime": 16,
+      "productBrand": "BlueIQ",
+      "productNumber": null,
+      "productUpc": null,
+      "variantSize": 0,
+      "productVariantSize": null,
+      "productDescription": "Optibright lighting controls",
+      "controls": null
+    },
+    "controlValues": null,
+    "alarm": null,
+    "alarmCode": null,
+    "alarmMessage": null,
+    "firmwareVersion": "0.6.1"
+  }
+]

@@ -226,4 +226,4 @@ captures/
 secrets.json
 token.txt
 
-.vscode/*
+*.vscode/

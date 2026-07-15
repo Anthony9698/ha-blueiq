@@ -1,0 +1,13 @@
+{
+  "domain": "blueiq",
+  "name": "BlueIQ",
+  "codeowners": ["@anthony9698"],
+  "config_flow": false,
+  "dependencies": [],
+  "documentation": "https://github.com/anthony9698/ha-blueiq",
+  "integration_type": "hub",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/anthony9698/ha-blueiq/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}

@@ -225,3 +225,5 @@ __marimo__/
 captures/
 secrets.json
 token.txt
+
+.vscode/*

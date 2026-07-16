@@ -86,14 +86,23 @@ class BlueIQClient:
         self,
         method: str,
         path: str,
+        *,
+        data: bytes | None = None,
+        extra_headers: dict[str, str] | None = None,
     ) -> Any:
         url = f"{self._base_url}{path}"
+
+        headers = self.headers.copy()
+
+        if extra_headers:
+            headers.update(extra_headers)
 
         try:
             async with self._session.request(
                 method,
                 url,
-                headers=self.headers,
+                headers=headers,
+                data=data,
                 timeout=15,
             ) as response:
                 if response.status in {401, 403}:
@@ -103,15 +112,17 @@ class BlueIQClient:
 
                 response.raise_for_status()
 
-                if response.status == 204:
+                body = await response.read()
+
+                if not body:
                     return None
 
                 content_type = response.headers.get("Content-Type", "")
-                if "application/json" not in content_type:
-                    text = await response.text()
-                    return text or None
 
-                return await response.json()
+                if "application/json" in content_type:
+                    return await response.json()
+
+                return body.decode(errors="replace")
 
         except BlueIQAuthenticationError:
             raise
@@ -192,4 +203,8 @@ class BlueIQClient:
         await self._request(
             "POST",
             f"/api/mode/{mode_id}/apply",
+            data=b"",
+            extra_headers={
+                "Content-Type": "application/json",
+            },
         )

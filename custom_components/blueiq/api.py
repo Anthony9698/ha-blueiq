@@ -20,7 +20,7 @@ from .const import (
     HEADER_APP_BUILD,
     HEADER_APP_PLATFORM,
     HEADER_APP_VERSION,
-    HEADER_TOKEN,
+    CONF_TOKEN,
 )
 
 DEFAULT_TIMEOUT = ClientTimeout(total=15)
@@ -106,7 +106,7 @@ class BlueIQClient:
         }
 
         if include_token and self._token:
-            headers[HEADER_TOKEN] = self._token
+            headers[CONF_TOKEN] = self._token
 
         if extra_headers:
             headers.update(extra_headers)

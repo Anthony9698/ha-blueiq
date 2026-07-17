@@ -1,0 +1,24 @@
+{
+  "title": "BlueIQ",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to BlueIQ",
+        "description": "Enter your BlueIQ account credentials.",
+        "data": {
+          "username": "Email",
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Unable to connect to BlueIQ.",
+      "invalid_auth": "The email or password is incorrect.",
+      "no_devices": "No BlueIQ devices were found on this account.",
+      "unknown": "An unexpected error occurred."
+    },
+    "abort": {
+      "already_configured": "This BlueIQ account is already configured."
+    }
+  }
+}

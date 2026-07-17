@@ -2,7 +2,7 @@
   "domain": "blueiq",
   "name": "BlueIQ",
   "codeowners": ["@anthony9698"],
-  "config_flow": false,
+  "config_flow": true,
   "dependencies": [],
   "documentation": "https://github.com/anthony9698/ha-blueiq",
   "integration_type": "hub",

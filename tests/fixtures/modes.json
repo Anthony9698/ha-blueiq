@@ -1,6 +1,6 @@
 [
   {
-    "modeId": 186463,
+    "modeId": 900001,
     "modeName": "Sunrise",
     "accountId": 12345,
     "deviceName": "TEST-DEVICE-001",
@@ -160,7 +160,7 @@
     "modeImagePath": null
   },
   {
-    "modeId": 186464,
+    "modeId": 900002,
     "modeName": "Day",
     "accountId": 12345,
     "deviceName": "TEST-DEVICE-001",
@@ -320,7 +320,7 @@
     "modeImagePath": null
   },
   {
-    "modeId": 186465,
+    "modeId": 900003,
     "modeName": "Sunset",
     "accountId": 12345,
     "deviceName": "TEST-DEVICE-001",
@@ -480,7 +480,7 @@
     "modeImagePath": null
   },
   {
-    "modeId": 186466,
+    "modeId": 900004,
     "modeName": "Night",
     "accountId": 12345,
     "deviceName": "TEST-DEVICE-001",
@@ -640,7 +640,7 @@
     "modeImagePath": null
   },
   {
-    "modeId": 186467,
+    "modeId": 900005,
     "modeName": "Overnight",
     "accountId": 12345,
     "deviceName": "TEST-DEVICE-001",
@@ -800,7 +800,7 @@
     "modeImagePath": null
   },
   {
-    "modeId": 186468,
+    "modeId": 900006,
     "modeName": "Predawn",
     "accountId": 12345,
     "deviceName": "TEST-DEVICE-001",

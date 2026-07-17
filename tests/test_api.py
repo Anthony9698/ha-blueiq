@@ -15,9 +15,13 @@ from custom_components.blueiq.api import (
     BlueIQProtocolError,
 )
 
+from custom_components.blueiq.const import HEADER_TOKEN
+
 BASE_URL = "https://central.nobleapplications.com"
 TOKEN = "test-token"
 DEVICE_NAME = "TEST-DEVICE-001"
+EMAIL = "TEST_EMAIL"
+PASSWORD = "TEST_PASSWORD"
 
 
 @pytest.mark.asyncio
@@ -160,3 +164,136 @@ async def test_get_modes_rejects_invalid_response_shape() -> None:
                 match="Expected a list of modes",
             ):
                 await client.get_modes(DEVICE_NAME)
+
+
+@pytest.mark.asyncio
+async def test_validate_token_posts_account_open() -> None:
+    url = f"{BASE_URL}/api/account/open"
+
+    with aioresponses() as mocked:
+        mocked.post(
+            url,
+            status=200,
+            body="",
+        )
+
+        async with ClientSession() as session:
+            client = BlueIQClient(session, TOKEN)
+
+            assert await client.validate_token() is True
+
+
+@pytest.mark.asyncio
+async def test_validate_token_rejects_invalid_token() -> None:
+    url = f"{BASE_URL}/api/account/open"
+
+    with aioresponses() as mocked:
+        mocked.post(
+            url,
+            status=401,
+            body="Invalid token",
+        )
+
+        async with ClientSession() as session:
+            client = BlueIQClient(session, TOKEN)
+
+            with pytest.raises(BlueIQAuthenticationError):
+                await client.validate_token()
+
+
+@pytest.mark.asyncio
+async def test_authenticate_stores_returned_token() -> None:
+    url = f"{BASE_URL}/api/account/login"
+
+    with aioresponses() as mocked:
+        mocked.post(
+            url,
+            status=200,
+            payload={"token": TOKEN},
+        )
+
+        async with ClientSession() as session:
+            client = BlueIQClient(session)
+
+            returned_token = await client.authenticate(EMAIL, PASSWORD)
+
+
+@pytest.mark.asyncio
+async def test_authenticate_does_not_send_existing_token() -> None:
+    url = f"{BASE_URL}/api/account/login"
+
+    with aioresponses() as mocked:
+        mocked.post(
+            url,
+            status=200,
+            payload={"token": TOKEN},
+        )
+
+        async with ClientSession() as session:
+            client = BlueIQClient(session, TOKEN)
+
+            returned_token = await client.authenticate(EMAIL, PASSWORD)
+
+            request_key = ("POST", URL(url))
+            requests = mocked.requests[request_key]
+
+    assert len(requests) == 1
+
+    request = requests[0]
+
+    assert "Authorization" not in request.kwargs["headers"]
+
+
+@pytest.mark.asyncio
+async def test_invalid_credentials_raise_authentication_error() -> None:
+    url = f"{BASE_URL}/api/account/login"
+
+    with aioresponses() as mocked:
+        mocked.post(
+            url,
+            status=401,
+            body="Invalid credentials",
+        )
+
+        async with ClientSession() as session:
+            client = BlueIQClient(session)
+
+            with pytest.raises(BlueIQAuthenticationError):
+                await client.authenticate(EMAIL, PASSWORD)
+
+
+@pytest.mark.asyncio
+async def test_authenticated_requests_include_returned_token() -> None:
+    login_url = f"{BASE_URL}/api/account/login"
+    devices_url = f"{BASE_URL}/api/device"
+
+    with aioresponses() as mocked:
+        mocked.post(
+            login_url,
+            status=200,
+            payload={"token": TOKEN},
+        )
+        mocked.get(
+            devices_url,
+            status=200,
+            payload=[],
+        )
+
+        async with ClientSession() as session:
+            client = BlueIQClient(session)
+
+            returned_token = await client.authenticate(EMAIL, PASSWORD)
+            await client.get_devices()
+
+        login_requests = mocked.requests[("POST", URL(login_url))]
+        device_requests = mocked.requests[("GET", URL(devices_url))]
+
+    assert returned_token == TOKEN
+    assert len(login_requests) == 1
+    assert len(device_requests) == 1
+
+    login_headers = login_requests[0].kwargs["headers"]
+    device_headers = device_requests[0].kwargs["headers"]
+
+    assert HEADER_TOKEN not in login_headers
+    assert device_headers[HEADER_TOKEN] == TOKEN

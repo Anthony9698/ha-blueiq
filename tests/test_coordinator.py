@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from unittest.mock import AsyncMock, Mock
+from unittest.mock import AsyncMock, Mock, call
 
 import pytest
 
@@ -14,7 +14,7 @@ from custom_components.blueiq.api import (
     BlueIQDevice,
     BlueIQMode,
 )
-from custom_components.blueiq.coordinator import BlueIQCoordinator
+from custom_components.blueiq.coordinator import BlueIQCoordinator, BlueIQData
 
 
 @pytest.mark.asyncio
@@ -63,3 +63,54 @@ async def test_coordinator_fetches_devices_and_modes(
 
     client.get_devices.assert_awaited_once_with()
     client.get_modes.assert_awaited_once_with(device.device_name)
+
+
+@pytest.mark.asyncio
+async def test_coordinator_applies_mode(
+    hass: HomeAssistant,
+) -> None:
+    """The coordinator should apply the matching mode."""
+    device_name = "TEST-DEVICE-001"
+
+    mode = BlueIQMode(
+        mode_id=900002,
+        name="Predawn",
+        preset_type="EARLY_MORNING",
+        device_name=device_name,
+    )
+
+    client = AsyncMock(spec=BlueIQClient)
+
+    config_entry = Mock(spec=ConfigEntry)
+    config_entry.entry_id = "test-entry"
+
+    coordinator = BlueIQCoordinator(
+        hass=hass,
+        config_entry=config_entry,
+        client=client,
+    )
+
+    coordinator.async_set_updated_data(
+        BlueIQData(
+            devices={},
+            modes={
+                device_name: (mode,),
+            },
+            selected_modes={},
+        )
+    )
+
+    await coordinator.async_apply_mode(
+        device_name=device_name,
+        option="Predawn",
+    )
+
+    client.apply_mode.assert_awaited_once_with(900002)
+    client.set_schedule_override.assert_awaited_once_with(
+        device_name=device_name,
+        duration_minutes=1440,
+    )
+
+    assert coordinator.data.selected_modes == {
+        device_name: "Predawn",
+    }

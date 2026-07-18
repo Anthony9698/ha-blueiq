@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import CONF_PASSWORD, CONF_USERNAME
+from homeassistant.const import CONF_PASSWORD, CONF_USERNAME, Platform
 from homeassistant.core import HomeAssistant
 from homeassistant.exceptions import ConfigEntryAuthFailed
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
@@ -14,6 +14,10 @@ from .api import (
     BlueIQConnectionError,
 )
 from .const import CONF_TOKEN
+
+PLATFORMS: list[Platform] = [
+    Platform.SELECT,
+]
 
 type BlueIQConfigEntry = ConfigEntry[BlueIQClient]
 
@@ -54,6 +58,11 @@ async def async_setup_entry(
 
     entry.runtime_data = client
 
+    await hass.config_entries.async_forward_entry_setups(
+        entry,
+        PLATFORMS,
+    )
+
     return True
 
 
@@ -62,4 +71,7 @@ async def async_unload_entry(
     entry: BlueIQConfigEntry,
 ) -> bool:
     """Unload a BlueIQ config entry."""
-    return True
+    return await hass.config_entries.async_unload_platforms(
+        entry,
+        PLATFORMS,
+    )

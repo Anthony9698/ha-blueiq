@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from typing import Any
-from unittest.mock import AsyncMock, patch
+from unittest.mock import AsyncMock, patch, Mock
 
 from aiohttp import ClientSession
 import pytest
@@ -239,3 +239,27 @@ async def test_invalid_credentials_raise_authentication_error() -> None:
 
     assert client.token is None
     assert client.is_authenticated is False
+
+
+@pytest.mark.asyncio
+async def test_set_schedule_override() -> None:
+    """The client should send the schedule override request."""
+    client = BlueIQClient(
+        session=Mock(),
+        token="test-token",
+    )
+    client._request = AsyncMock()
+
+    await client.set_schedule_override(
+        device_name="TEST-DEVICE-001",
+        duration_minutes=1440,
+    )
+
+    client._request.assert_awaited_once_with(
+        "PUT",
+        "/api/schedule/override/TEST-DEVICE-001/1440",
+        data=b"",
+        extra_headers={
+            "Content-Type": "application/json",
+        },
+    )

@@ -21,6 +21,7 @@ from .const import (
     HEADER_APP_PLATFORM,
     HEADER_APP_VERSION,
     CONF_TOKEN,
+    SCHEDULE_OVERRIDE_MINUTES,
 )
 
 DEFAULT_TIMEOUT = ClientTimeout(total=15)
@@ -370,3 +371,21 @@ class BlueIQClient:
         )
 
         return True
+
+    async def set_schedule_override(
+        self,
+        device_name: str,
+        duration_minutes: int,
+    ) -> None:
+        """Override the device schedule for a number of minutes."""
+        if duration_minutes <= 0:
+            raise ValueError("Override duration must be greater than zero")
+
+        await self._request(
+            "PUT",
+            f"/api/schedule/override/{device_name}/{duration_minutes}",
+            data=b"",
+            extra_headers={
+                "Content-Type": "application/json",
+            },
+        )

@@ -22,6 +22,8 @@ from .api import (
     BlueIQMode,
 )
 
+from .const import SCHEDULE_OVERRIDE_MINUTES
+
 _LOGGER = logging.getLogger(__name__)
 
 UPDATE_INTERVAL = timedelta(minutes=5)
@@ -137,6 +139,10 @@ class BlueIQCoordinator(DataUpdateCoordinator[BlueIQData]):
 
         try:
             await self.client.apply_mode(mode.mode_id)
+            await self.client.set_schedule_override(
+                device_name=device_name,
+                duration_minutes=SCHEDULE_OVERRIDE_MINUTES,
+            )
 
         except BlueIQAuthenticationError as error:
             raise ConfigEntryAuthFailed("BlueIQ authentication failed") from error

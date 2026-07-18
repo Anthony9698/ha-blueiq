@@ -138,11 +138,11 @@ class BlueIQCoordinator(DataUpdateCoordinator[BlueIQData]):
             )
 
         try:
-            await self.client.apply_mode(mode.mode_id)
             await self.client.set_schedule_override(
                 device_name=device_name,
                 duration_minutes=SCHEDULE_OVERRIDE_MINUTES,
             )
+            await self.client.apply_mode(mode.mode_id)
 
         except BlueIQAuthenticationError as error:
             raise ConfigEntryAuthFailed("BlueIQ authentication failed") from error

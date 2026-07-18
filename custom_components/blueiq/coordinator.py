@@ -63,12 +63,24 @@ class BlueIQCoordinator(DataUpdateCoordinator[BlueIQData]):
         try:
             devices = await self.client.get_devices()
 
+            _LOGGER.debug(
+                "BlueIQ devices response: %s",
+                devices,
+            )
+
             devices_by_name = {device.device_name: device for device in devices}
 
             modes_by_device: dict[str, tuple[BlueIQMode, ...]] = {}
 
             for device in devices:
                 modes = await self.client.get_modes(device.device_name)
+
+                _LOGGER.debug(
+                    "BlueIQ modes for %s: %s",
+                    device.device_name,
+                    modes,
+                )
+
                 modes_by_device[device.device_name] = tuple(modes)
 
         except BlueIQAuthenticationError as error:
